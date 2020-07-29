@@ -15,12 +15,19 @@
 #include <iostream> 
 #include <string>  
 #include <vector>
+#include <unordered_set>
 #include <ctime>
 #include <chrono>
 #include "render/box.h"
+#include "kdtree.h"
 
 template<typename PointT>
 class ProcessPointClouds {
+
+    void clusterHelper(int indice, const std::vector<std::vector<float>> points, 
+                     std::vector<int> &cluster, std::vector<bool> &processed, 
+                     KdTree *tree, float distanceTol);
+
 public:
 
     //constructor

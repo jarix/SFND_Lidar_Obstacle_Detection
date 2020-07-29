@@ -1,7 +1,7 @@
 /* \author Aaron Brown */
 // Quiz on implementing kd tree
 
-#include "../../render/render.h"
+#include "render/render.h"
 
 #define DO_3D 1 
 
